@@ -21,7 +21,7 @@ def enhance_grayscale_8bit_image(image):
     # The membership parameters can be modified, if the result
     # doesn't satisfy your expectations
     gray_membership_function = np.vectorize(
-        triangular_membership_function(65, gray_color, 180))
+        triangular_membership_function(65, gray_color, 190))
     bright_membership_function = np.vectorize(
         sigma_membership_function(gray_color, 145))
     dark_membership_function = np.vectorize(
