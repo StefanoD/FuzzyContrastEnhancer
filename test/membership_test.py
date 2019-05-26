@@ -20,7 +20,7 @@ y2 = [bright_membership_function(param) for param in x]
 y3 = [dark_membership_function(param) for param in x]
 
 
-fig, axs = plt.subplots()
+fig, axs = plt.subplots(figsize=(35, 20))
 axs.plot(x, y1, x, y2, x, y3)
 axs.set_xlabel('Gray Values', fontsize=16)
 axs.set_ylabel('Membership', fontsize=16)
@@ -50,5 +50,8 @@ plt.annotate('Bright Membership Function', xy=(235, 1),
              fontsize=16,
              arrowprops=dict(arrowstyle="->", 
              connectionstyle="arc3,rad=.2"))
+
+
+plt.savefig("images/fuzzy_functions.svg")
 
 plt.show()
