@@ -28,7 +28,7 @@ def sigma_membership_function(sigma_start, sigma_end):
         if sigma_start <= parameter and parameter < sigma_end:
             return (parameter - sigma_start) / (sigma_end - sigma_start)
 
-        # triangle_end <= parameter
+        # sigma_end <= parameter
         return 1
 
     return membership_function
@@ -42,7 +42,7 @@ def inverse_sigma_membership_function(sigma_start, sigma_end):
         if sigma_start <= parameter and parameter < sigma_end:
             return 1 - (parameter - sigma_start) / (sigma_end - sigma_start)
 
-        # triangle_end <= parameter
+        # sigma_end <= parameter
         return 0
 
     return membership_function
